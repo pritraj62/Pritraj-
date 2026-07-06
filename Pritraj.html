@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title> Pritraj </title>
+
+<!-- GOOGLE FONT -->
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- BOOTSTRAP -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#050816;
+color:white;
+overflow-x:hidden;
+}
+
+/* ========================= */
+/* SCROLLBAR */
+/* ========================= */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+background:linear-gradient(#00f2fe,#4facfe);
+border-radius:20px;
+}
+
+/* ========================= */
+/* PARTICLES */
+/* ========================= */
+
+.particles{
+position:fixed;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-1;
+}
+
+.particles span{
+position:absolute;
+display:block;
+border-radius:50%;
+animation:animate 25s linear infinite;
+bottom:-150px;
+}
+
+.particles span:nth-child(1){
+left:10%;
+width:120px;
+height:120px;
+background:#00f2fe;
+opacity:0.15;
+animation-duration:15s;
+}
+
+.particles span:nth-child(2){
+left:30%;
+width:180px;
+height:180px;
+background:#4facfe;
+opacity:0.15;
+animation-duration:18s;
+}
+
+.particles span:nth-child(3){
+left:50%;
+width:100px;
+height:100px;
+background:#00f2fe;
+opacity:0.15;
+animation-duration:12s;
+}
+
+.particles span:nth-child(4){
+left:70%;
+width:150px;
+height:150px;
+background:#4facfe;
+opacity:0.15;
+animation-duration:22s;
+}
+
+.particles span:nth-child(5){
+left:90%;
+width:120px;
+height:120px;
+background:#00f2fe;
+opacity:0.15;
+animation-duration:16s;
+}
+
+@keyframes animate{
+
+0%{
+transform:translateY(0) rotate(0deg);
+border-radius:30%;
+}
+
+100%{
+transform:translateY(-1200px) rotate(720deg);
+border-radius:50%;
+}
+
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+.navbar{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(12px);
+padding:18px 8%;
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.navbar-brand{
+font-size:32px;
+font-weight:700;
+color:white !important;
+}
+
+.navbar-brand span{
+background:linear-gradient(to right,#00f2fe,#4facfe);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.nav-link{
+color:white !important;
+margin-left:20px;
+font-weight:500;
+position:relative;
+}
+
+.nav-link::after{
+content:'';
+position:absolute;
+left:0;
+bottom:-5px;
+width:0%;
+height:2px;
+background:#00f2fe;
+transition:0.5s;
+}
+
+.nav-link:hover::after{
+width:100%;
+}
+
+.nav-link:hover{
+color:#00f2fe !important;
+}
+
+/* ========================= */
+/* HERO SECTION */
+/* ========================= */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:120px 10%;
+}
+
+.hero h1{
+font-size:90px;
+font-weight:800;
+line-height:100px;
+animation:fadeUp 2s ease;
+}
+
+.hero h1 span{
+background:linear-gradient(to right,#00f2fe,#4facfe);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.typing{
+font-size:35px;
+font-weight:600;
+color:#00f2fe;
+margin-top:20px;
+height:50px;
+}
+
+.hero p{
+margin-top:25px;
+line-height:32px;
+color:#d0d0d0;
+max-width:650px;
+}
+
+.hero-btns{
+margin-top:40px;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn-custom{
+padding:15px 35px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:0.5s;
+position:relative;
+overflow:hidden;
+}
+
+.btn-main{
+background:linear-gradient(to right,#00f2fe,#4facfe);
+color:white;
+}
+
+.btn-outline-custom{
+border:2px solid #00f2fe;
+color:#00f2fe;
+}
+
+.btn-custom:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 30px rgba(0,242,254,0.5);
+}
+
+.glow-btn::before{
+content:'';
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,0.4),
+transparent
+);
+transition:0.6s;
+}
+
+.glow-btn:hover::before{
+left:100%;
+}
+
+/* ========================= */
+/* HERO ORBIT */
+/* ========================= */
+
+.orbit-wrapper{
+position:relative;
+width:450px;
+height:450px;
+margin:auto;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.center-glow{
+width:220px;
+height:220px;
+border-radius:50%;
+background:linear-gradient(to right,#00f2fe,#4facfe);
+display:flex;
+justify-content:center;
+align-items:center;
+animation:pulse 3s infinite;
+box-shadow:0 0 60px rgba(0,242,254,0.7);
+position:relative;
+overflow:hidden;
+}
+
+.center-glow::before{
+content:'';
+position:absolute;
+width:350px;
+height:350px;
+background:conic-gradient(
+transparent,
+rgba(255,255,255,0.5),
+transparent
+);
+animation:spin 6s linear infinite;
+}
+
+.floating-logo{
+width:180px;
+height:180px;
+background:#050816;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:70px;
+color:#00f2fe;
+z-index:2;
+animation:floatLogo 4s ease-in-out infinite;
+}
+
+.orbit{
+position:absolute;
+border:1px dashed rgba(255,255,255,0.15);
+border-radius:50%;
+animation:rotateOrbit 12s linear infinite;
+}
+
+.orbit span{
+position:absolute;
+top:-18px;
+left:50%;
+transform:translateX(-50%);
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#0f172a;
+color:#00f2fe;
+font-size:26px;
+box-shadow:0 0 20px rgba(0,242,254,0.5);
+}
+
+.orbit1{
+width:280px;
+height:280px;
+}
+
+.orbit2{
+width:340px;
+height:340px;
+animation-duration:18s;
+animation-direction:reverse;
+}
+
+.orbit3{
+width:400px;
+height:400px;
+animation-duration:25s;
+}
+
+.orbit4{
+width:460px;
+height:460px;
+animation-duration:30s;
+animation-direction:reverse;
+}
+
+.orbit5{
+width:520px;
+height:520px;
+animation-duration:35s;
+}
+
+/* ========================= */
+/* SOCIAL ICONS */
+/* ========================= */
+
+.social-icons{
+margin-top:35px;
+display:flex;
+gap:20px;
+}
+
+.social-icons a{
+width:55px;
+height:55px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+background:rgba(255,255,255,0.05);
+color:white;
+font-size:22px;
+text-decoration:none;
+transition:0.5s;
+}
+
+.social-icons a:hover{
+background:#00f2fe;
+color:black;
+transform:translateY(-10px) rotate(360deg);
+box-shadow:0 0 30px #00f2fe;
+}
+
+/* ========================= */
+/* SECTION */
+/* ========================= */
+
+section{
+padding:100px 10%;
+}
+
+.section-title{
+font-size:55px;
+text-align:center;
+margin-bottom:60px;
+font-weight:700;
+}
+
+.section-title span{
+color:#00f2fe;
+}
+
+/* ========================= */
+/* ABOUT */
+/* ========================= */
+
+.about-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:35px;
+}
+
+.about-box{
+background:rgba(255,255,255,0.05);
+padding:40px;
+border-radius:30px;
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.1);
+transition:0.6s;
+position:relative;
+overflow:hidden;
+}
+
+.about-box::before{
+content:'';
+position:absolute;
+width:250px;
+height:250px;
+background:#00f2fe;
+filter:blur(100px);
+top:-120px;
+right:-120px;
+opacity:0;
+transition:0.6s;
+}
+
+.about-box:hover::before{
+opacity:0.2;
+}
+
+.about-box:hover{
+transform:translateY(-15px);
+border:1px solid #00f2fe;
+box-shadow:0 10px 40px rgba(0,242,254,0.3);
+}
+
+.about-box i{
+font-size:45px;
+margin-bottom:20px;
+color:#00f2fe;
+animation:bounce 3s infinite;
+}
+
+.about-box h3{
+font-size:28px;
+margin-bottom:15px;
+}
+
+.about-box p{
+line-height:30px;
+color:#d0d0d0;
+}
+
+/* ========================= */
+/* SKILLS */
+/* ========================= */
+
+.skill-box{
+padding:25px;
+background:rgba(255,255,255,0.05);
+border-radius:20px;
+text-align:center;
+font-weight:600;
+transition:0.5s;
+}
+
+.skill-box:hover{
+background:#00f2fe;
+color:black;
+transform:scale(1.08);
+box-shadow:0 0 30px rgba(0,242,254,0.4);
+}
+
+/* ========================= */
+/* PROGRESS BAR */
+/* ========================= */
+
+.skill-progress{
+margin-top:60px;
+}
+
+.skill-progress h5{
+margin-bottom:10px;
+}
+
+.progress{
+height:12px;
+border-radius:30px;
+background:#111827;
+margin-bottom:25px;
+overflow:hidden;
+}
+
+.progress-bar{
+background:linear-gradient(to right,#00f2fe,#4facfe);
+animation:progressAnim 3s ease;
+}
+
+/* ========================= */
+/* PROJECTS */
+/* ========================= */
+
+.project-card{
+background:rgba(255,255,255,0.05);
+padding:40px;
+border-radius:30px;
+backdrop-filter:blur(10px);
+transition:0.6s;
+height:100%;
+transform-style:preserve-3d;
+}
+
+.project-card:hover{
+transform:rotateY(10deg) rotateX(10deg);
+box-shadow:0 10px 40px rgba(0,242,254,0.4);
+}
+
+.project-card i{
+font-size:45px;
+margin-bottom:20px;
+color:#00f2fe;
+}
+
+.project-card h3{
+margin-bottom:15px;
+}
+
+/* ========================= */
+/* STATS */
+/* ========================= */
+
+.stats-wrapper{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:60px;
+}
+
+.stat-box{
+padding:35px;
+border-radius:25px;
+background:rgba(255,255,255,0.05);
+text-align:center;
+transition:0.5s;
+}
+
+.stat-box:hover{
+transform:scale(1.08);
+background:#00f2fe;
+color:black;
+}
+
+.stat-box h2{
+font-size:50px;
+font-weight:700;
+margin-bottom:10px;
+}
+/* ========================= */
+/* JOURNEY SECTION */
+/* ========================= */
+
+.journey-section{
+position:relative;
+}
+
+.timeline{
+position:relative;
+max-width:1200px;
+margin:auto;
+}
+
+.timeline::after{
+content:'';
+position:absolute;
+width:4px;
+background:linear-gradient(
+to bottom,
+#00f2fe,
+#4facfe
+);
+top:0;
+bottom:0;
+left:50%;
+margin-left:-2px;
+border-radius:20px;
+box-shadow:0 0 20px #00f2fe;
+}
+
+.timeline-box{
+padding:20px 40px;
+position:relative;
+width:50%;
+animation:fadeTimeline 1.5s ease;
+}
+
+.timeline-box::after{
+content:'';
+position:absolute;
+width:25px;
+height:25px;
+right:-13px;
+background:#00f2fe;
+border:4px solid #050816;
+top:30px;
+border-radius:50%;
+z-index:1;
+box-shadow:0 0 20px #00f2fe;
+}
+
+.left{
+left:0;
+}
+
+.right{
+left:50%;
+}
+
+.right::after{
+left:-13px;
+}
+
+.timeline-content{
+padding:35px;
+background:rgba(255,255,255,0.05);
+position:relative;
+border-radius:25px;
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.1);
+transition:0.5s;
+overflow:hidden;
+}
+
+.timeline-content::before{
+content:'';
+position:absolute;
+width:250px;
+height:250px;
+background:#00f2fe;
+filter:blur(100px);
+top:-120px;
+right:-120px;
+opacity:0;
+transition:0.6s;
+}
+
+.timeline-content:hover::before{
+opacity:0.2;
+}
+
+.timeline-content:hover{
+transform:translateY(-10px);
+border:1px solid #00f2fe;
+box-shadow:0 10px 40px rgba(0,242,254,0.3);
+}
+
+.timeline-content h3{
+font-size:28px;
+margin-bottom:10px;
+color:#00f2fe;
+}
+
+.timeline-content h4{
+margin-bottom:15px;
+font-size:18px;
+color:white;
+}
+
+.timeline-content p{
+line-height:30px;
+color:#d0d0d0;
+}
+
+.timeline-icon{
+font-size:40px;
+margin-bottom:20px;
+color:#00f2fe;
+animation:floatIcon 3s infinite;
+}
+
+@keyframes floatIcon{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+@keyframes fadeTimeline{
+
+from{
+opacity:0;
+transform:translateY(80px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* ========================= */
+/* RESPONSIVE JOURNEY */
+/* ========================= */
+
+@media(max-width:768px){
+
+.timeline::after{
+left:20px;
+}
+
+.timeline-box{
+width:100%;
+padding-left:70px;
+padding-right:20px;
+}
+
+.timeline-box::after{
+left:7px;
+}
+
+.right{
+left:0%;
+}
+
+}
+
+/* ========================= */
+/* CONTACT */
+/* ========================= */
+
+.contact-box{
+max-width:800px;
+margin:auto;
+padding:50px;
+border-radius:30px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+}
+
+.form-control{
+background:#111827;
+border:none;
+color:white !important;
+padding:18px;
+border-radius:15px;
+margin-top:20px;
+}
+
+.form-control:focus{
+background:#111827;
+border:1px solid #00f2fe;
+box-shadow:none;
+}
+
+textarea{
+height:160px;
+resize:none;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer{
+padding:30px;
+text-align:center;
+background:#02040f;
+}
+
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+
+@keyframes rotateOrbit{
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+@keyframes spin{
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+@keyframes pulse{
+
+50%{
+transform:scale(1.05);
+}
+
+}
+
+@keyframes floatLogo{
+
+50%{
+transform:translateY(-15px);
+}
+
+}
+
+@keyframes bounce{
+
+50%{
+transform:translateY(-10px);
+}
+
+}
+
+@keyframes progressAnim{
+
+from{
+width:0;
+}
+
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(80px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:992px){
+
+.hero{
+text-align:center;
+}
+
+.hero-btns{
+justify-content:center;
+}
+
+.social-icons{
+justify-content:center;
+}
+
+.orbit-wrapper{
+margin-top:80px;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:50px;
+line-height:65px;
+}
+
+.typing{
+font-size:24px;
+}
+
+.section-title{
+font-size:40px;
+}
+
+.orbit-wrapper{
+width:300px;
+height:300px;
+}
+
+.center-glow{
+width:150px;
+height:150px;
+}
+
+.floating-logo{
+width:120px;
+height:120px;
+font-size:45px;
+}
+
+.orbit1{
+width:200px;
+height:200px;
+}
+
+.orbit2{
+width:240px;
+height:240px;
+}
+
+.orbit3{
+width:280px;
+height:280px;
+}
+
+.orbit4{
+width:320px;
+height:320px;
+}
+
+.orbit5{
+width:360px;
+height:360px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- PARTICLES -->
+
+<div class="particles">
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<!-- NAVBAR -->
+ <!-- ========================= -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+<div class="container-fluid">
+
+<a class="navbar-brand" href="#">
+<i class="fa-solid fa-code"></i>
+<span>Pritraj</span>
+</a>
+
+<button class="navbar-toggler bg-light"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navMenu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse"
+id="navMenu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#about">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#skills">Skills</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#projects">Projects</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#journey">Journey</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#contact">Contact</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-lg-7">
+
+<h1>
+
+Hi, I'm <br>
+
+<span>Pritraj</span>
+
+</h1>
+
+<div class="typing"></div>
+
+<p>
+
+B.Sc student passionate
+about futuristic frontend development,
+creative UI design and modern interactive
+web experiences with animations.
+
+</p>
+
+<div class="hero-btns">
+
+<a href="#projects"
+class="btn-custom btn-main glow-btn">
+Explore Projects
+</a>
+
+<a href="#contact"
+class="btn-custom btn-outline-custom">
+Contact Me
+</a>
+
+</div>
+
+<div class="social-icons">
+
+<a href="#"><i class="fab fa-github"></i></a>
+
+<a href="#"><i class="fab fa-linkedin"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-twitter"></i></a>
+
+</div>
+
+</div>
+
+<div class="col-lg-5">
+
+<div class="orbit-wrapper">
+
+<div class="center-glow">
+
+<div class="floating-logo">
+
+<i class="fa-solid fa-code"></i>
+
+</div>
+
+</div>
+
+<div class="orbit orbit1">
+<span><i class="fa-brands fa-html5"></i></span>
+</div>
+
+<div class="orbit orbit2">
+<span><i class="fa-brands fa-css3-alt"></i></span>
+</div>
+
+<div class="orbit orbit3">
+<span><i class="fa-brands fa-js"></i></span>
+</div>
+
+<div class="orbit orbit4">
+<span><i class="fa-brands fa-bootstrap"></i></span>
+</div>
+
+<div class="orbit orbit5">
+<span><i class="fa-solid fa-brain"></i></span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">
+
+About <span>Me</span>
+
+</h2>
+
+<div class="about-container">
+
+<div class="about-box">
+
+<i class="fa-solid fa-laptop-code"></i>
+
+<h3>Frontend Developer</h3>
+
+<p>
+
+Creating futuristic responsive websites
+using HTML, CSS, JavaScript and Bootstrap
+with glowing UI and smooth animations.
+
+</p>
+
+</div>
+
+<div class="about-box">
+
+<i class="fa-solid fa-brain"></i>
+
+<h3>AI Student</h3>
+
+<p>
+
+Learning Artificial Intelligence technologies
+and building innovative modern web projects.
+
+</p>
+
+</div>
+
+<div class="about-box">
+
+<i class="fa-solid fa-wand-magic-sparkles"></i>
+
+<h3>Creative Designer</h3>
+
+<p>
+
+Passionate about futuristic UI,
+glassmorphism effects and creative
+interactive web experiences.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- STATS -->
+
+<div class="stats-wrapper">
+
+<div class="stat-box">
+
+<h2 class="counter"
+data-target="15">
+0
+</h2>
+
+<p>Projects</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2 class="counter"
+data-target="8">
+0
+</h2>
+
+<p>Technologies</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2 class="counter"
+data-target="100">
+0
+</h2>
+
+<p>Creativity</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2 class="counter"
+data-target="3">
+0
+</h2>
+
+<p>Years Learning</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2 class="section-title">
+
+My <span>Skills</span>
+
+</h2>
+
+<div class="container">
+
+<div class="row g-4">
+
+<div class="col-md-3">
+<div class="skill-box">HTML</div>
+</div>
+
+<div class="col-md-3">
+<div class="skill-box">CSS</div>
+</div>
+
+<div class="col-md-3">
+<div class="skill-box">JavaScript</div>
+</div>
+
+<div class="col-md-3">
+<div class="skill-box">Bootstrap</div>
+</div>
+
+<div class="col-md-3">
+<div class="skill-box">Python</div>
+</div>
+
+<div class="col-md-3">
+<div class="skill-box">UI / UX</div>
+</div>
+
+<div class="col-md-3">
+<div class="skill-box">AI Basics</div>
+</div>
+
+<div class="col-md-3">
+<div class="skill-box">Responsive Design</div>
+</div>
+
+</div>
+
+<!-- PROGRESS BAR -->
+
+<div class="skill-progress">
+
+<h5>HTML & CSS</h5>
+
+<div class="progress">
+<div class="progress-bar"
+style="width:95%">
+</div>
+</div>
+
+<h5>JavaScript</h5>
+
+<div class="progress">
+<div class="progress-bar"
+style="width:85%">
+</div>
+</div>
+
+<h5>Bootstrap</h5>
+
+<div class="progress">
+<div class="progress-bar"
+style="width:90%">
+</div>
+</div>
+
+<h5>UI / UX</h5>
+
+<div class="progress">
+<div class="progress-bar"
+style="width:80%">
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2 class="section-title">
+
+My <span>Projects</span>
+
+</h2>
+
+<div class="container">
+
+<div class="row g-4">
+
+<div class="col-md-4">
+
+<div class="project-card">
+
+<i class="fa-solid fa-globe"></i>
+
+<h3>Portfolio Website</h3>
+
+<p>
+
+Modern animated portfolio website
+with futuristic effects and responsive design.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="project-card">
+
+<i class="fa-solid fa-layer-group"></i>
+
+<h3>Pricing Table UI</h3>
+
+<p>
+
+Creative pricing table design using
+HTML, CSS and Bootstrap with hover effects.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="project-card">
+
+<i class="fa-solid fa-robot"></i>
+
+<h3>AI Project</h3>
+
+<p>
+
+Artificial Intelligence student project
+with modern responsive frontend design.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+<!-- ========================= -->
+<!-- ADD THIS FULL SECTION -->
+<!-- PLACE BELOW PROJECT SECTION -->
+<!-- ========================= -->
+
+<section id="journey" class="journey-section">
+
+<h2 class="section-title">
+
+My <span>Journey</span>
+
+</h2>
+
+<div class="timeline">
+
+<!-- JOURNEY 1 -->
+
+<div class="timeline-box left">
+
+<div class="timeline-content">
+
+<div class="timeline-icon">
+<i class="fa-solid fa-school"></i>
+</div>
+
+<h3>2023</h3>
+
+<h4>Started My Coding Journey</h4>
+
+<p>
+
+Started learning HTML and CSS basics.
+Created my first webpage and developed
+interest in frontend development.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- JOURNEY 2 -->
+
+<div class="timeline-box right">
+
+<div class="timeline-content">
+
+<div class="timeline-icon">
+<i class="fa-solid fa-code"></i>
+</div>
+
+<h3>2024</h3>
+
+<h4>Frontend Development</h4>
+
+<p>
+
+Learned responsive web design,
+Bootstrap, animations and modern UI design.
+Built portfolio and pricing table projects.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- JOURNEY 3 -->
+
+<div class="timeline-box left">
+
+<div class="timeline-content">
+
+<div class="timeline-icon">
+<i class="fa-solid fa-brain"></i>
+</div>
+
+<h3>2025</h3>
+
+<h4>Ar
